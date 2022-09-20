@@ -1,0 +1,4 @@
+[submodule "submodules/moma"]
+	path = submodules/moma
+	url = git@github.com:ethz-asl/moma.git
+	branch = feature/bt_and_fsm_demo
