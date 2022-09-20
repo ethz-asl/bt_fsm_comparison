@@ -2,3 +2,10 @@
 	path = submodules/moma
 	url = git@github.com:ethz-asl/moma.git
 	branch = feature/bt_and_fsm_demo
+[submodule "submodules/catkin_simple"]
+	path = submodules/catkin_simple
+	url = git@github.com:catkin/catkin_simple.git
+[submodule "submodules/vgn"]
+	path = submodules/vgn
+	url = git@github.com:ethz-asl/vgn.git
+	branch = devel
