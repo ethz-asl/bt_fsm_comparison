@@ -2,7 +2,8 @@
 
 In this demo a mobile manipulator has to achieve a mobile pick&place task.
 
-The robot is controlled both via a Finite State Machine and a Behavior Tree
+The robot is controlled both via a fault-tolerant Finite State Machine and a Behavior Tree.  
+The simplest version of the mobile manipulation task is realized also with a sequential design of a FSM.
 
 ## Setup
 
@@ -34,16 +35,22 @@ In a first terminal, launch the experiment environment in a gazebo simulation:
 roslaunch mobile_manip_demo run_gazebo.launch
 ```
 
-Then, the state machine can be launched through
+Then, the fault tolerant state machine can be launched through
 
 ```bash
-rosrun mobile_manip_demo full_task_sm.py
+rosrun mobile_manip_demo fault_tolerant_sm.py
+```
+
+the sequential state machine can be launched through
+
+```bash
+rosrun mobile_manip_demo sequential_sm.py
 ```
 
 whereas the behavior tree can be launch through
 
 ```bash
-rosrun mobile_manip_demo full_task_bt.py
+rosrun mobile_manip_demo behavior_tree.py
 ```
 
 ## Workspace overview
