@@ -58,6 +58,9 @@ rosrun mobile_manip_demo behavior_tree.py
 * the control policies are defined in `src`
 * the robot skills are defined in `scripts`
 
+## Media
+
+The video showing the mobile manipulator solving the task while controlled by the three policy representation is available at [this link](https://drive.google.com/file/d/1t6Q_a2XKccUspUXsMQzmufopultJKSnc/view?usp=sharing).
 
 ### TODOs
 
