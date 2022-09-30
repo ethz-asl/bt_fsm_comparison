@@ -35,6 +35,9 @@ moma_demo:
   place_pose: [0.5, 0.0, 0.25]
   inspection_station: [-1.0, -1.0, 0, 0, 0, 1, 0]
 
+  experiment: 3
+  visualization_only: False
+
 vgn:
   model: $(find vgn)/assets/models/vgn_conv.pth
 
@@ -47,3 +50,4 @@ tsdf_server:
     frame_id: wrist_camera_depth_optical_frame
     info_topic: /wrist_camera/color/camera_info
     depth_topic: /wrist_camera/depth/image_rect_raw
+

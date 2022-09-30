@@ -23,6 +23,10 @@ class RechargeSkill(Skill):
         self.charge_rate = rospy.get_param("moma_demo/battery_charge_rate")
         self.current_lv = copy(self.battery_lv)
 
+        task_type = rospy.get_param("moma_demo/experiment")
+        if task_type == 1:
+            self.drop_rate = 0
+
         # Action server
         self.action_server = SimpleActionServer(
             "/recharge",
@@ -65,3 +69,4 @@ if __name__ == "__main__":
     rs = RechargeSkill()
     rs.publish_battery_lv()
     rospy.spin()
+
