@@ -29,6 +29,11 @@ catkin build mobile_manip_demo
 
 ## Run Experiments
 
+The type of task the mobile manipulator can perform, can be defined by the parameter [`experiment`](https://github.com/ethz-asl/bt_fsm_comparison/blob/main/mobile_manip_demo/config/moma_demo.yaml#L38):
+* 1: pick the cube2 and place it in the delivery station;
+* 2: pick the cube2 and place it in the delivery station but go to recharge the batteries when they are low;
+* 3: pick the cube2, place it in the delivery station, then dock the robot but go to recharge the batteries when they are low.
+
 In a first terminal, launch the experiment environment in a gazebo simulation:
 
 ```bash
@@ -61,6 +66,8 @@ rosrun mobile_manip_demo behavior_tree.py
 ## Media
 
 The video showing the mobile manipulator solving the task while controlled by the three policy representation is available at [this link](https://drive.google.com/file/d/1t6Q_a2XKccUspUXsMQzmufopultJKSnc/view?usp=sharing).
+
+The images of the policy representations can be found in the [imgs](https://github.com/ethz-asl/bt_fsm_comparison/tree/main/imgs) folder.
 
 ### TODOs
 
