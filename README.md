@@ -65,7 +65,7 @@ rosrun mobile_manip_demo behavior_tree.py
 
 ## Media
 
-The video showing the mobile manipulator solving the task while controlled by the three policy representation is available at [this link](https://drive.google.com/file/d/1t6Q_a2XKccUspUXsMQzmufopultJKSnc/view?usp=sharing).
+The video showing the mobile manipulator solving the task while controlled by the three policy representation is available at [this link](https://youtu.be/Z0GAkClVx-I).
 
 The images of the policy representations can be found in the [imgs](https://github.com/ethz-asl/bt_fsm_comparison/tree/main/imgs) folder.
 
