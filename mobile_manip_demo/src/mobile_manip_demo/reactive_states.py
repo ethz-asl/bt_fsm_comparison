@@ -393,4 +393,3 @@ class IDLE(smach.State):
             else:
                 # Restart the task
                 return self.outcomes[0]
-

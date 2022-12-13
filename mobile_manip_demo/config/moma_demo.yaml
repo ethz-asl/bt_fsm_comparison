@@ -50,4 +50,3 @@ tsdf_server:
     frame_id: wrist_camera_depth_optical_frame
     info_topic: /wrist_camera/color/camera_info
     depth_topic: /wrist_camera/depth/image_rect_raw
-

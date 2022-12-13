@@ -69,4 +69,3 @@ if __name__ == "__main__":
     rs = RechargeSkill()
     rs.publish_battery_lv()
     rospy.spin()
-

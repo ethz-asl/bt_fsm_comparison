@@ -51,6 +51,7 @@ def reactive_state_machine():
     dock_outcome = "Dock pose reached"
 
     goal_dictionary = {
+        # "search": [search_name, search_IDs],
         "move_1": [move_1_name, cube_ID],
         "pick": [pick_name, cube_ID],
         "move_2": [move_2_name, delivery],
@@ -62,6 +63,7 @@ def reactive_state_machine():
         goal_dictionary["dock"] = [dock_name, dock_pose]
 
     outcome_dictionary = {
+        # "search": search_outcome,
         "move_1": move_1_outcome,
         "pick": pick_outcome,
         "move_2": move_2_outcome,
@@ -76,6 +78,22 @@ def reactive_state_machine():
     sm = smach.StateMachine(outcomes=["SUCCESS"])
 
     with sm:
+        # smach.StateMachine.add(
+        #     search_name,
+        #     reactive_states.Search(
+        #         name=search_name,
+        #         locations=cube_locations,
+        #         IDs=search_IDs,
+        #         outcomes=[search_outcome, "RUNNING", "FAILURE", recharge_condition],
+        #     ),
+        #     transitions={
+        #         search_outcome: move_1_name,
+        #         "RUNNING": search_name,
+        #         "FAILURE": "IDLE",
+        #         recharge_condition: recharge_name,
+        #     },
+        # )
+
         # Move Action 1
         move_1_tr = {
             move_1_outcome: pick_name,
@@ -202,6 +220,7 @@ def reactive_state_machine():
         # IDLE
         idle_tr = {
             "Restart the task": move_1_name,
+            # search_outcome: move_1_name,
             move_1_outcome: pick_name,
             pick_outcome: move_2_name,
             move_2_outcome: place_name,
@@ -261,4 +280,3 @@ def reactive_state_machine():
 
 if __name__ == "__main__":
     reactive_state_machine()
-

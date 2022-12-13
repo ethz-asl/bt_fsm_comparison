@@ -40,6 +40,26 @@ class MoMaBT:
         task_type = rospy.get_param("moma_demo/experiment")
         self.visualization_only = rospy.get_param("moma_demo/visualization_only")
 
+        # Search for Cubes
+        # search = py_trees.composites.Selector(name="Fallback")
+        # search.add_children(
+        #     [
+        #         bt.Found(
+        #             name=f"Cubes found?",
+        #             IDs=[2],
+        #         ),
+        #         bt.Search(name=f"Search cubes!", targets=search_locations),
+        #     ]
+        # )
+
+        # move_sequence = bt.RSequence(name="Sequence")
+        # move_sequence.add_children(
+        #     [
+        #         search,
+        #         bt.Move(name=f"Move-To cube{cube_ID}!", goal_ID=cube_ID),
+        #     ]
+        # )
+
         # Mobile Picking:
         move_to_pick = py_trees.composites.Selector(name="Fallback")
         move_to_pick.add_children(
@@ -199,4 +219,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
